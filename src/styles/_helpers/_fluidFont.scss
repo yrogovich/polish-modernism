@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+@mixin fluid-font($max-rem, $min-rem) {
+
+  $vpw: #{math.div($max-rem * 10, $width-unitless + (2 * $padding)) * 100}vw;
+
+  font-size: max(#{$min-rem}rem, min(#{$vpw}, #{$max-rem}rem)); // sass-lint:disable-line function-name-format
+  font-size: clamp(#{$min-rem}rem, #{$vpw}, #{$max-rem}rem); // sass-lint:disable-line no-duplicate-properties
+}
+
+/*
+Genrates fluid font size, given:
+ - minimal font size in rems
+ - expected font size in pixels for full width container
+ - maximum font size in rems
+
+!!! Note! It has to be: $max-rem != $min-rem
+  @include fluid-font(3, 6.6);
+results in:
+  font-size: clamp(3rem, 4.8245614035vw, 6.6rem);
+*/

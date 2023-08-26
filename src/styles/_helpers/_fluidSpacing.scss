@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+@mixin fluid-spacing($attr, $max-px, $min-px) {
+
+  @if ($max-px > 0) {
+    $vpw: #{math.div($max-px, $width-unitless + (2 * $padding)) * 100}vw;
+    #{$attr}: max(#{$min-px}px, min(#{$vpw}, #{$max-px}px)); // sass-lint:disable-line function-name-format
+    #{$attr}: clamp(#{$min-px}px, #{$vpw}, #{$max-px}px); // sass-lint:disable-line no-duplicate-properties
+  } @else {
+    $vpw: #{math.div($max-px, $width-unitless + (2 * $padding)) * 100}vw;
+    #{$attr}: min(#{$max-px}px, max(#{$vpw}, #{$min-px}px)); // sass-lint:disable-line function-name-format
+    #{$attr}: clamp(#{$max-px}px, #{$vpw}, #{$min-px}px); // sass-lint:disable-line no-duplicate-properties
+  }
+}
+
+/*
+
+Genrates fluid padding / margin - best used for vertical spacing:
+ - attribute to be matched
+ - minimal margin / padding in px
+ - maximum margin / padding in px
+
+!!! Note! It has to be: $min-rem != $max-rem
+  @include fluid-spacing('padding-top', 20, 74);
+results in:
+  padding-top: clamp(20px, 5.4093567251vw, 74px);
+
+*/

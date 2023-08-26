@@ -1,0 +1,88 @@
+/* Example of use is at the bottom of file */
+
+$breakpointsDown: (
+        'small-mobile' : '(max-width:  340px)',
+        'mobile' : '(max-width:  576px)',
+        'tablet' : '(max-width:  768px)',
+        'laptop-small' : '(max-width: 992px)',
+        'laptop' : '(max-width: 1200px)',
+        'laptop-large' : '(max-width: 1400px)',
+);
+
+$breakpointsUp: (
+        'small-mobile' : '(max-width:  339px)',
+        'mobile' : '(min-width:  575px)',
+        'tablet' : '(min-width:  767px)',
+        'laptop-small' : '(min-width: 991px)',
+        'laptop' : '(min-width: 1199px)',
+        'laptop-large' : '(min-width: 1399px)',
+);
+
+$mobileFirst: false !default;
+@mixin rwd($breakpoint, $breakpointUp : $mobileFirst) {
+
+  @if ($breakpointUp != false) {
+
+    @if map-has-key($breakpointsUp, $breakpoint) {
+
+      @media #{(map-get($breakpointsUp, $breakpoint))} {
+        @content;
+      }
+
+    } @else {
+
+      @warn 'Unfortunately, not found breakpoint called `#{$breakpoint}`!';
+
+    }
+
+  } @else {
+
+    @if map-has-key($breakpointsDown, $breakpoint) {
+
+      @media #{(map-get($breakpointsDown, $breakpoint))} {
+        @content;
+      }
+
+    } @else {
+
+      @warn 'Unfortunately, not found breakpoint called `#{$breakpoint}`!';
+
+    }
+
+  }
+}
+
+
+/*
+  Example:
+    ul {
+      margin-bottom: 15px;
+      @include rwd(tablet, true) {
+        margin-bottom: 30px;
+      }
+
+      li {
+        margin-bottom: 20px;
+        @include rwd(tablet) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  Result:
+    ul {
+      margin-bottom: 15px;
+    }
+    ul li {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 769px) {
+      ul {
+        margin-bottom: 30px;
+      }
+    }
+    @media (max-width: 768px) {
+      ul li {
+        margin-bottom: 10px;
+      }
+    }
+*/
