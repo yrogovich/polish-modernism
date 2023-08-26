@@ -7,6 +7,22 @@ a {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $f-prim;
+  color: $c-text;
+  font-size: $fs-base;
+  background: $c-page-color;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .container {
   margin: 0 auto;
   padding: 0 2rem;
