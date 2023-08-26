@@ -97,41 +97,75 @@ const randomizedImages = randomizeImagesOrder(images);
 </section>
 
 <style lang="scss">
+  @import '../styles/utills.scss';
+
   .grid {
     padding-top: 50vh;
     padding-bottom: 50vh;
 
     display: grid;
     grid-template-columns: repeat(30, 1fr);
-    grid-gap: 20rem 2rem;
+    grid-column-gap: 2rem;
+    @include fluid-spacing('grid-row-gap', 100, 200);
+
+    @include rwd(tablet) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    @include rwd(mobile) {
+      grid-gap: 10rem 2rem;
+    }
   }
 
   .image {
-    grid-column: span 6;
     img {
       width: 100%;
     }
 
     &[data-size="small"] {
       grid-column: span 6;
+      @include rwd(tablet) {
+        grid-column: span 3;
+      }
+      @include rwd(mobile) {
+        grid-column: span 6;
+      }
     }
     &[data-size="medium"] {
       grid-column: span 10;
+      @include rwd(tablet) {
+        grid-column: span 4;
+      }
+      @include rwd(mobile) {
+        grid-column: span 6;
+      }
     }
     &[data-size="large"] {
       grid-column: span 15;
+      @include rwd(tablet) {
+        grid-column: span 12;
+      }
     }
   }
 
   .spacing {
     &[data-size="small"] {
       grid-column: span 2;
+      @include rwd(tablet) {
+        grid-column: span 6;
+      }
     }
     &[data-size="medium"] {
       grid-column: span 3;
+      @include rwd(tablet) {
+        grid-column: span 6;
+      }
     }
     &[data-size="large"] {
       grid-column: span 4;
+      @include rwd(tablet) {
+        grid-column: span 6;
+      }
     }
   }
 </style>
