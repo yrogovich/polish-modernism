@@ -1,0 +1,137 @@
+---
+const images = [
+  {
+    src: '/images/image-1.jpg',
+    alt: 'Image 1',
+  },
+  {
+    src: '/images/image-2.jpg',
+    alt: 'Image 2',
+  },
+  {
+    src: '/images/image-3.jpg',
+    alt: 'Image 3',
+  },
+  {
+    src: '/images/image-4.jpg',
+    alt: 'Image 4',
+  },
+  {
+    src: '/images/image-5.jpg',
+    alt: 'Image 5',
+  },
+  {
+    src: '/images/image-6.jpg',
+    alt: 'Image 6',
+  },
+  {
+    src: '/images/image-7.jpg',
+    alt: 'Image 7',
+  },
+  {
+    src: '/images/image-8.jpg',
+    alt: 'Image 8',
+  },
+  {
+    src: '/images/image-9.jpg',
+    alt: 'Image 9',
+  },
+  {
+    src: '/images/image-10.jpg',
+    alt: 'Image 10',
+  },
+  {
+    src: '/images/image-11.jpg',
+    alt: 'Image 11',
+  },
+  {
+    src: '/images/image-12.jpg',
+    alt: 'Image 12',
+  },
+  {
+    src: '/images/image-13.jpg',
+    alt: 'Image 13',
+  },
+  {
+    src: '/images/image-14.jpg',
+    alt: 'Image 14',
+  },
+  {
+    src: '/images/image-15.jpg',
+    alt: 'Image 15',
+  },
+  {
+    src: '/images/image-16.jpg',
+    alt: 'Image 16',
+  },
+]
+
+const generateRandomSize = (possibleSizes = ['small', 'medium', 'large']) => {
+  return possibleSizes[Math.floor(Math.random() * possibleSizes.length)];
+}
+
+const randomizeImagesOrder = (images) => {
+  return images.sort(() => Math.random() - 0.5);
+}
+
+const randomizedImages = randomizeImagesOrder(images);
+---
+
+<section>
+  <div class="container">
+    <div class="grid">
+      {randomizedImages.map((image, index) => {
+        const addSpacing = (index + 1) % 3 === 0;
+
+        return (
+          <>
+            <div class="image" data-size={generateRandomSize()}>
+              <img src={image.src} alt={image.alt}/>
+            </div>
+            {addSpacing && <div class="spacing" data-size={generateRandomSize()}></div>}
+          </>
+        )
+      })}
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .grid {
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-gap: 20rem 2rem;
+  }
+
+  .image {
+    grid-column: span 6;
+    img {
+      width: 100%;
+    }
+
+    &[data-size="small"] {
+      grid-column: span 6;
+    }
+    &[data-size="medium"] {
+      grid-column: span 10;
+    }
+    &[data-size="large"] {
+      grid-column: span 15;
+    }
+  }
+
+  .spacing {
+    &[data-size="small"] {
+      grid-column: span 2;
+    }
+    &[data-size="medium"] {
+      grid-column: span 3;
+    }
+    &[data-size="large"] {
+      grid-column: span 4;
+    }
+  }
+</style>
