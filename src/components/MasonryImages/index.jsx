@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './styles.module.scss';
 
 const MasonryImages = ({ images }) => {
+  const [randomizedImages, setRandomizedImages] = useState([]);
+
   const generateRandomSize = (possibleSizes = ['small', 'medium', 'large']) => {
     return possibleSizes[Math.floor(Math.random() * possibleSizes.length)];
   }
@@ -10,11 +12,13 @@ const MasonryImages = ({ images }) => {
     return images.sort(() => Math.random() - 0.5);
   }
 
-  const randomizedImages = randomizeImagesOrder(images);
+  useEffect(() => {
+    setRandomizedImages(randomizeImagesOrder(images));
+  }, [images]);
 
   return (
     <section>
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.grid}>
           {randomizedImages.map(({
              image,
