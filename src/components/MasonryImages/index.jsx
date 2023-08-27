@@ -26,7 +26,7 @@ const MasonryImages = ({ images }) => {
              years,
              architect,
              location,
-                                 }, index) => {
+          }, index) => {
             const isDivisibleBy2 = (index + 1) % 2 === 0;
             const isDivisibleBy3 = (index + 1) % 3 === 0;
 
@@ -34,9 +34,9 @@ const MasonryImages = ({ images }) => {
               isDivisibleBy2 ? '5rem' : isDivisibleBy3 ? '10rem' : '0px';
 
             return (
-              <>
+              <React.Fragment key={index}>
                 <div className={styles.image} data-size={generateRandomSize()} style={{marginTop}}>
-                  <img src={image.src} alt={name} width="910" height="910"/>
+                  <img src={image.src} alt={name} />
                   <div className={styles.image__hover}>
                     <h2>{name}</h2>
                     <p>{years}</p>
@@ -45,7 +45,7 @@ const MasonryImages = ({ images }) => {
                   </div>
                 </div>
                 {isDivisibleBy3 && <div className={styles.spacing} data-size={generateRandomSize()}></div>}
-              </>
+              </React.Fragment>
             )
           })}
         </div>
