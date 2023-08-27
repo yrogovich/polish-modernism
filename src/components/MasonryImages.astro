@@ -11,13 +11,12 @@ const randomizeImagesOrder = (images) => {
   return images.sort(() => Math.random() - 0.5);
 }
 
-const randomizedImages = randomizeImagesOrder(images);
 ---
 
 <section>
   <div class="container">
     <div class="grid">
-      {randomizedImages.map(({
+      {randomizeImagesOrder(images).map(({
         image,
         name,
         years,
