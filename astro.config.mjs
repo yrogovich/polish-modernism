@@ -4,7 +4,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://yrogovich.github.io',
   base: '/polish-modernism',
-  output: 'static',
+  experimental: {
+    assets: true
+  },
   vite: {
     css: {
       preprocessorOptions: {
