@@ -1,8 +1,13 @@
 import React, {useEffect, useState} from 'react';
+import { motion } from 'framer-motion';
+import useMediaQuery from "@/hooks/useMediaQuery.jsx";
 import styles from './styles.module.scss';
+
 
 const MasonryImages = ({ images }) => {
   const [randomizedImages, setRandomizedImages] = useState([]);
+  const repeatingSequence = [0.1, 0.2, 0.3];
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   const generateRandomSize = (possibleSizes = ['small', 'medium', 'large']) => {
     return possibleSizes[Math.floor(Math.random() * possibleSizes.length)];
@@ -35,15 +40,37 @@ const MasonryImages = ({ images }) => {
 
             return (
               <React.Fragment key={index}>
-                <div className={styles.image} data-size={generateRandomSize()} style={{marginTop}}>
-                  <img src={image.src} alt={name} width={500} height={500} />
+                <motion.div
+                  className={styles.image}
+                  data-size={generateRandomSize()}
+                  style={{marginTop}}
+                  initial={{
+                    opacity: 0,
+                    y: 200,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    duration: .5,
+                    delay: !isMobile ? repeatingSequence[index % repeatingSequence.length] : null,
+                    type: "spring",
+                    stiffness: 10,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                  }}
+                >
+                  <img src={image.src} alt={name} />
                   <div className={styles.image__hover}>
                     <h2>{name}</h2>
                     <p>{years}</p>
                     <p>{architect}</p>
                     <p>{location}</p>
                   </div>
-                </div>
+                </motion.div>
                 {isDivisibleBy3 && <div className={styles.spacing} data-size={generateRandomSize()}></div>}
               </React.Fragment>
             )

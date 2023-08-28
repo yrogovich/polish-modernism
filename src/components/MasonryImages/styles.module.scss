@@ -11,10 +11,6 @@
   @include rwd(tablet) {
     grid-template-columns: repeat(12, 1fr);
   }
-
-  @include rwd(mobile) {
-    grid-gap: 10rem 2rem;
-  }
 }
 
 .image {
@@ -24,6 +20,7 @@
   img {
     width: 100%;
     height: auto;
+    max-height: 90vh;
   }
 
   &[data-size="small"] {
