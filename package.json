@@ -1,5 +1,5 @@
 {
-  "name": "Polish modernism",
+  "name": "polish-modernism",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -14,6 +14,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.10.14",
+    "framer-motion": "^10.16.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
