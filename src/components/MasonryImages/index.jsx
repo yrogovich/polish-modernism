@@ -53,10 +53,10 @@ const MasonryImages = ({ images }) => {
                     y: 0,
                   }}
                   transition={{
-                    duration: .5,
+                    duration: 0.2,
                     delay: !isMobile ? repeatingSequence[index % repeatingSequence.length] : null,
                     type: "spring",
-                    stiffness: 10,
+                    stiffness: 30,
                   }}
                   viewport={{
                     once: true,
