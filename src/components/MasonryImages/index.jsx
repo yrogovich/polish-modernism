@@ -36,7 +36,7 @@ const MasonryImages = ({ images }) => {
             return (
               <React.Fragment key={index}>
                 <div className={styles.image} data-size={generateRandomSize()} style={{marginTop}}>
-                  <img src={image.src} alt={name} />
+                  <img src={image.src} alt={name} width={500} height={500} />
                   <div className={styles.image__hover}>
                     <h2>{name}</h2>
                     <p>{years}</p>
