@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import useMediaQuery from "@/hooks/useMediaQuery.jsx";
 import styles from './styles.module.scss';
 
-
 const MasonryImages = ({ images }) => {
   const [randomizedImages, setRandomizedImages] = useState([]);
   const repeatingSequence = [0.1, 0.2, 0.3];
@@ -29,7 +28,6 @@ const MasonryImages = ({ images }) => {
              image,
              name,
              years,
-             architect,
              location,
           }, index) => {
             const isDivisibleBy2 = (index + 1) % 2 === 0;
@@ -65,10 +63,9 @@ const MasonryImages = ({ images }) => {
                 >
                   <img src={image.src} alt={name} />
                   <div className={styles.image__hover}>
+                    <p>{location}</p>
                     <h2>{name}</h2>
                     <p>{years}</p>
-                    <p>{architect}</p>
-                    <p>{location}</p>
                   </div>
                 </motion.div>
                 {isDivisibleBy3 && <div className={styles.spacing} data-size={generateRandomSize()}></div>}

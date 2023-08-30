@@ -16,6 +16,7 @@
 .image {
   position: relative;
   cursor: pointer;
+  font-size: 1.4rem;
 
   img {
     width: 100%;
@@ -24,7 +25,6 @@
   }
 
   &[data-size="small"] {
-    font-size: 1rem;
     grid-column: span 6;
     @include rwd(tablet) {
       grid-column: span 3;
@@ -34,7 +34,6 @@
     }
   }
   &[data-size="medium"] {
-    font-size: 1.8rem;
     grid-column: span 10;
     @include rwd(tablet) {
       grid-column: span 4;
@@ -44,7 +43,6 @@
     }
   }
   &[data-size="large"] {
-    font-size: 1.8rem;
     grid-column: span 15;
     @include rwd(tablet) {
       grid-column: span 12;

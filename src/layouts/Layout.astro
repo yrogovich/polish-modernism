@@ -1,5 +1,6 @@
 ---
 import '../styles/index.scss';
+import Preloader from '@/components/Preloader'
 
 const { title } = Astro.props;
 ---
@@ -16,6 +17,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<main class="page">
+			<Preloader client:load />
 			<slot />
 		</main>
 	</body>

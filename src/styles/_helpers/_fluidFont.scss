@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@mixin fluid-font($max-rem, $min-rem) {
+@mixin fluid-font($min-rem, $max-rem) {
 
   $vpw: #{math.div($max-rem * 10, $width-unitless + (2 * $padding)) * 100}vw;
 
