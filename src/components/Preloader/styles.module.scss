@@ -19,7 +19,6 @@
     height: 100%;
     z-index: -1;
   }
-
   &__indicator {
     text-transform: uppercase;
     margin-top: auto;
@@ -33,10 +32,11 @@
     height: 100%;
   }
   &__digit {
-    @include fluid-font(14, 20);
+    @include fluid-font(24, 30);
     font-weight: 900;
     overflow: hidden;
     opacity: 0;
+    font-family: $f-second;
   }
   &__overflow {
     overflow: hidden;

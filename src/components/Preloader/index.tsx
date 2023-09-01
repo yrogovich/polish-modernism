@@ -38,11 +38,11 @@ const Preloader = () => {
             className={styles.preloader__digit}
             initial={{
               opacity: 1,
-              y: 180,
+              y: 280,
             }}
             animate={{
               opacity: [1, 1, 1, 1, 0],
-              y: [180, 0, 0, 0],
+              y: [280, 0, 0, 0],
             }}
             transition={{
               duration: 1,
@@ -55,11 +55,11 @@ const Preloader = () => {
             className={styles.preloader__digit}
             initial={{
               opacity: 1,
-              y: 180,
+              y: 280,
             }}
             animate={{
               opacity: 1,
-              y: [180, 0, -180],
+              y: [280, 0, -280],
             }}
             transition={{
               duration: 1,
@@ -72,11 +72,11 @@ const Preloader = () => {
             className={styles.preloader__digit}
             initial={{
               opacity: 0,
-              y: 180,
+              y: 280,
             }}
             animate={{
               opacity: [0, 1, 1, 1],
-              y: [0, 0, 0, -180],
+              y: [0, 0, 0, -280],
             }}
             transition={{
               duration: 1,
