@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Thunder';
+  src: url('/fonts/Thunder-BlackLC.woff2') format('woff2'),
+  url('/fonts/Thunder-BlackLC.woff') format('woff'),
+  url('/fonts/Thunder-BlackLC.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Neue Montreal';
   src: url('/fonts/NeueMontreal-Bold.woff2') format('woff2'),
   url('/fonts/NeueMontreal-Bold.woff') format('woff'),
