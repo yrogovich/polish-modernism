@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@mixin fluid-spacing($attr, $max-px, $min-px) {
+@mixin fluid-spacing($attr, $min-px, $max-px) {
 
   @if ($max-px > 0) {
     $vpw: #{math.div($max-px, $width-unitless + (2 * $padding)) * 100}vw;

@@ -1,0 +1,58 @@
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  &__about {
+    border-top: 1px solid $c-text;
+    padding-top: 1.6rem;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    line-height: 1.3;
+    margin-bottom: 10vh;
+
+    @include fluid-font(1.2, 1.8);
+    @include fluid-spacing('max-width', 160, 360);
+
+    @include rwd(tablet) {
+      position: static;
+      margin-top: 20%;
+      margin-left: auto;
+    }
+  }
+
+  &__dates {
+    @include fluid-font(4, 9.6);
+    @include fluid-spacing('margin-bottom', 10, 20);
+    font-weight: 100;
+    letter-spacing: -0.192rem;
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    @include fluid-spacing('gap', 5, 30);
+
+    @include rwd(tablet) {
+      flex-wrap: wrap;
+    }
+
+    svg {
+      max-width: 100%;
+      height: fit-content;
+    }
+  }
+}
