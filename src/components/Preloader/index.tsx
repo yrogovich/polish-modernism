@@ -1,8 +1,12 @@
 import React from 'react'
+import { useStore } from '@nanostores/react';
+import { isPreloaderFinished } from '@/store';
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
 
 const Preloader = () => {
+  const $isPreloaderFinished = useStore(isPreloaderFinished);
+
   return (
     <motion.div
       className={styles.preloader}
@@ -16,6 +20,7 @@ const Preloader = () => {
         duration: 1,
         delay: 2.8,
       }}
+      onAnimationComplete={() => isPreloaderFinished.set(!$isPreloaderFinished)}
     >
       <div className={styles.preloader__layer} />
       <motion.div

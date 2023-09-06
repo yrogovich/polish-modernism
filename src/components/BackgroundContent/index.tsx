@@ -1,5 +1,8 @@
 import React from 'react'
-import styles from './styles.module.scss'
+import { useStore } from '@nanostores/react';
+import { isPreloaderFinished } from '@/store';
+import { motion } from 'framer-motion';
+import styles from './styles.module.scss';
 
 const svgPolish = (
   <svg xmlns="http://www.w3.org/2000/svg" width="687" height="249" viewBox="0 0 687 249" fill="none">
@@ -27,20 +30,120 @@ const svgModernism = (
 )
 
 const BackgroundContent = () => {
-  return (
-    <div className={styles.content}>
-      <div className={styles.content__about}>Modernism - a current in architecture, also called functionalism. It developed in Poland in two phases, separated by World War II and the enforced period of socialist realism in architecture.</div>
+  const $isPreloaderFinished = useStore(isPreloaderFinished);
+
+  return $isPreloaderFinished ? (
+    <motion.div
+      className={styles.content}
+    >
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 100,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 30,
+          damping: 10,
+          duration: .6,
+          delay: .8,
+        }}
+       className={styles.content__about}
+      >Modernism - a current in architecture, also called functionalism. It developed in Poland in two phases, separated by World War II and the enforced period of socialist realism in architecture.</motion.div>
       <div className={styles.content__dates}>
-        <span>1934</span>
-        <span>-</span>
-        <span>1993</span>
+        <motion.span
+          initial={{
+            opacity: 0,
+            y: 200,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 30,
+            damping: 10,
+            duration: .6,
+            delay: .3,
+          }}
+        >1934</motion.span>
+        <motion.span
+          initial={{
+            opacity: 0,
+            y: 200,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 30,
+            damping: 10,
+            duration: .6,
+            delay: .35,
+          }}
+        >-</motion.span>
+        <motion.span
+          initial={{
+            opacity: 0,
+            y: 200,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 30,
+            damping: 10,
+            duration: .6,
+            delay: .4,
+          }}
+        >1993</motion.span>
       </div>
       <div className={styles.content__title}>
-        <span>{svgPolish}</span>
-        <span>{svgModernism}</span>
+        <motion.span
+          initial={{
+            opacity: 0,
+            y: 200,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 30,
+            damping: 10,
+            duration: .6,
+          }}
+        >{svgPolish}</motion.span>
+        <motion.span
+          initial={{
+            opacity: 0,
+            y: 200,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 30,
+            damping: 10,
+            duration: .6,
+            delay: .15,
+          }}
+        >{svgModernism}</motion.span>
       </div>
-    </div>
-  )
+    </motion.div>
+  ) : null
 };
 
 export default BackgroundContent;

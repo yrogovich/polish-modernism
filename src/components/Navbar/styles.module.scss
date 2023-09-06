@@ -4,16 +4,44 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba($c-black, .9);
+  background: $c-black;
   border-bottom: 1px solid $c-text;
   padding: 2rem 2rem 3.2rem;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  line-height: 1.4;
+  gap: 1.6rem;
+
+  @include rwd(tablet, true) {
+    justify-content: space-between;
+  }
   
   &__label {
     text-transform: uppercase;
     @include fluid-font(1.4, 1.8);
-    line-height: 1.4;
+  }
+
+  &__desktop {
+    @include rwd(tablet) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: .4rem;
+
+    @include rwd(tablet, true) {
+      display: none;
+    }
+
+    > div {
+      width: 100%;
+      height: 2px;
+      background: $c-text;
+    }
   }
 }

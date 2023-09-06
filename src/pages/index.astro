@@ -1,7 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import Preloader from '../components/Preloader'
 import MasonryImages from '@/components/MasonryImages';
 import Navbar from "@/components/Navbar";
+import BackgroundContent from "@/components/BackgroundContent";
 
 import image1 from '@/assets/images/image-1.jpg';
 import image2 from '@/assets/images/image-2.jpg';
@@ -137,6 +139,8 @@ const architecture = [
 ---
 
 <Layout title="Polish modernism">
+  <Preloader client:load />
   <Navbar client:load />
+  <BackgroundContent client:load />
   <MasonryImages images={architecture} client:load />
 </Layout>
