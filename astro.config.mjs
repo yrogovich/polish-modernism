@@ -5,7 +5,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://yrogovich.github.io',
-  base: '/polish-modernism',
+  base: 'polish-modernism/',
   vite: {
     css: {
       preprocessorOptions: {
