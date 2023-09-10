@@ -10,7 +10,7 @@ $breakpointsDown: (
 );
 
 $breakpointsUp: (
-        'small-mobile' : '(max-width:  339px)',
+        'small-mobile' : '(min-width:  339px)',
         'mobile' : '(min-width:  575px)',
         'tablet' : '(min-width:  767px)',
         'laptop-small' : '(min-width: 991px)',
