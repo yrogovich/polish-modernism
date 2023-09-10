@@ -45,11 +45,13 @@ const BackgroundContent = () => {
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [$isPreloaderFinished]);
 
   useEffect(() => {
+    if (!titleRef?.current) return;
+
     setTitleRefTop(titleRef.current.getBoundingClientRect().top)
-  }, [titleRef]);
+  }, [titleRef, $isPreloaderFinished]);
 
   return $isPreloaderFinished ? (
     <motion.div
