@@ -19,6 +19,7 @@ const Footer = ({
 
   useEffect(() => {
     isFooterInView.set(isInView)
+    console.log(isInView)
   }, [isInView])
 
   return (
