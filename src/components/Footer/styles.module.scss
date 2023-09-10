@@ -1,0 +1,40 @@
+.footer {
+  padding: 2rem;
+
+  &__grid {
+    @include fluid-spacing('gap', 20, 40);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    @include rwd(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include rwd(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    @include fluid-font(1.4, 1.8);
+    @include fluid-spacing('margin-bottom', 20, 40);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $c-text;
+  }
+
+  &__list,
+  &__singleList {
+    @include fluid-font(1.4, 1.8);
+    line-height: 1.5;
+    display: grid;
+    gap: 1.6rem;
+    text-transform: uppercase;
+  }
+  &__list {
+    grid-template-columns: repeat(2, 1fr);
+    @include rwd(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

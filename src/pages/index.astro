@@ -4,6 +4,7 @@ import Preloader from '../components/Preloader'
 import MasonryImages from '@/components/MasonryImages';
 import Navbar from "@/components/Navbar";
 import BackgroundContent from "@/components/BackgroundContent";
+import Footer from "@/components/Footer";
 
 import image1 from '@/assets/images/image-1.jpg';
 import image2 from '@/assets/images/image-2.jpg';
@@ -27,112 +28,160 @@ const architecture = [
     image: image1,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image2,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Erich Mendelsohn',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image3,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Jerzy Romański'
+    ],
     location: 'Warsaw',
   },
   {
     image: image4,
-    name: 'The Lacherts House',
+    name: 'Central Department Store',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Arseniusz Romanowicz',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image5,
-    name: 'The Lacherts House',
+    name: 'Institute "Monument - Child Health Centre"',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image6,
-    name: 'The Lacherts House',
+    name: 'Social Insurance Institution ',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
-    location: 'Warsaw',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
+    location: 'Wrocław',
   },
   {
     image: image7,
-    name: 'The Lacherts House',
+    name: 'Wrocław\'s Manhattan',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image8,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
-    location: 'Warsaw',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
+    location: 'Poznań',
   },
   {
     image: image9,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
-    location: 'Warsaw',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
+    location: 'Katowice',
   },
   {
     image: image10,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
-    location: 'Warsaw',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
+    location: 'Kalish',
   },
   {
     image: image11,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image12,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image13,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image14,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image15,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
   {
     image: image16,
     name: 'The Lacherts House',
     years: '1928-1930',
-    architect: 'Bohdan Lachert & Józef Szanajcy',
+    architect: [
+      'Bohdan Lachert',
+      'Józef Szanajcy'
+    ],
     location: 'Warsaw',
   },
 ]
@@ -143,4 +192,5 @@ const architecture = [
   <Navbar client:load />
   <BackgroundContent client:load />
   <MasonryImages images={architecture} client:load />
+  <Footer architecture={architecture} client:load />
 </Layout>

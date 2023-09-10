@@ -51,7 +51,7 @@ const MasonryImages = ({ images }) => {
                     y: 0,
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.4,
                     delay: !isMobile ? repeatingSequence[index % repeatingSequence.length] : null,
                   }}
                   viewport={{

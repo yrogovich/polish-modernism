@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import cn from 'classnames'
 import styles from './styles.module.scss'
 import {useStore} from '@nanostores/react'
-import {isPreloaderFinished} from '@/store.js'
+import {isPreloaderFinished, navHeight} from '@/store.js'
 import {motion} from 'framer-motion'
 
 const Navbar = () => {
@@ -13,7 +13,11 @@ const Navbar = () => {
   useEffect(() => {
     if (!$isPreloaderFinished) return;
     setNavbarHeight(navbarRef.current.clientHeight);
-  }, [$isPreloaderFinished])
+  }, [$isPreloaderFinished]);
+
+  useEffect(() => {
+    navHeight.set(navbarHeight);
+  }, [navbarHeight]);
 
   return (
     <>

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { useStore } from '@nanostores/react';
-import { isPreloaderFinished } from '@/store';
-import { motion } from 'framer-motion';
+import {isFooterInView, isPreloaderFinished, navHeight} from '@/store'
+import {motion} from 'framer-motion'
 import styles from './styles.module.scss';
 
 const svgPolish = (
@@ -30,13 +30,32 @@ const svgModernism = (
 )
 
 const BackgroundContent = () => {
+  const [titleRefTop, setTitleRefTop] = useState(0);
   const $isPreloaderFinished = useStore(isPreloaderFinished);
+  const $isFooterInView = useStore(isFooterInView);
+  const $navbarHeight = useStore(navHeight);
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (!titleRef?.current) return;
+      setTitleRefTop(titleRef.current.getBoundingClientRect().top);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    setTitleRefTop(titleRef.current.getBoundingClientRect().top)
+  }, [titleRef]);
 
   return $isPreloaderFinished ? (
     <motion.div
       className={styles.content}
     >
-      <motion.div
+      {!$isFooterInView && <motion.div
         initial={{
           opacity: 0,
           y: 100,
@@ -44,6 +63,7 @@ const BackgroundContent = () => {
         animate={{
           opacity: 1,
           y: 0,
+          display: $isFooterInView ? 'none' : 'block',
         }}
         transition={{
           type: 'spring',
@@ -53,8 +73,8 @@ const BackgroundContent = () => {
           delay: .8,
         }}
        className={styles.content__about}
-      >Modernism - a current in architecture, also called functionalism. It developed in Poland in two phases, separated by World War II and the enforced period of socialist realism in architecture.</motion.div>
-      <div className={styles.content__dates}>
+      >Modernism - a current in architecture, also called functionalism. It developed in Poland in two phases, separated by World War II and the enforced period of socialist realism in architecture.</motion.div>}
+      {!$isFooterInView && <motion.div className={styles.content__dates}>
         <motion.span
           initial={{
             opacity: 0,
@@ -106,8 +126,21 @@ const BackgroundContent = () => {
             delay: .4,
           }}
         >1993</motion.span>
-      </div>
-      <div className={styles.content__title}>
+      </motion.div>}
+
+      <motion.div
+        className={styles.content__title}
+        ref={titleRef}
+        animate={{
+          y: $isFooterInView ? -(titleRefTop - $navbarHeight) : 0,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 40,
+          damping: 10,
+          duration: 1,
+        }}
+      >
         <motion.span
           initial={{
             opacity: 0,
@@ -141,7 +174,7 @@ const BackgroundContent = () => {
             delay: .15,
           }}
         >{svgModernism}</motion.span>
-      </div>
+      </motion.div>
     </motion.div>
   ) : null
 };

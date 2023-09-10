@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -31,7 +31,6 @@
 
   &__dates {
     @include fluid-font(4, 9.6);
-    @include fluid-spacing('margin-bottom', 10, 20);
     font-weight: 100;
     letter-spacing: -0.192rem;
     text-transform: uppercase;
@@ -44,6 +43,9 @@
     display: flex;
     align-self: flex-end;
     justify-content: space-between;
+    background-color: $c-black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     @include fluid-spacing('gap', 5, 30);
 
     @include rwd(tablet) {
