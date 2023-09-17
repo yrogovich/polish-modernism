@@ -1,0 +1,69 @@
+.popup {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: $c-preloader-bg;
+  color: $c-black;
+
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__author {
+    flex: 1 1 40rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "role role"
+      "image name"
+      "image socials";
+
+    &Image {
+      grid-area: image;
+    }
+    &Role {
+      grid-area: role;
+      border-top: 1px solid currentColor;
+      padding-top: .5rem;
+      font-size: 3rem;
+      letter-spacing: -0.3px;
+      margin-bottom: 3rem;
+    }
+    &Name {
+      grid-area: name;
+      font-family: $f-second;
+      font-size: 6vw;
+      text-transform: uppercase;
+      line-height: .8;
+      margin-top: .4rem;
+    }
+    &Socials {
+      grid-area: socials;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      @include rwd(tablet) {
+        flex-direction: column;
+        gap: .8rem;
+      }
+    }
+  }
+}

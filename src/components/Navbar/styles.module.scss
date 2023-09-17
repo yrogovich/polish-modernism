@@ -17,6 +17,7 @@
   }
   
   &__label {
+    cursor: pointer;
     text-transform: uppercase;
     @include fluid-font(1.4, 1.8);
   }
