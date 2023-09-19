@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useStore} from '@nanostores/react'
 import {AnimatePresence, motion} from 'framer-motion'
-import {isPopupOpen} from '@/store.js'
+import {isDevModeOn, isPopupOpen} from '@/store.js'
 
 import yaro from "@/assets/images/yaro.jpg";
 import vlad from "@/assets/images/wladek.jpg";
@@ -10,6 +10,7 @@ import styles from './styles.module.scss'
 
 const Popup = () => {
   const $isPopupOpen = useStore(isPopupOpen);
+  const $isDevModeOn = useStore(isDevModeOn);
 
   const handleKeyDown = (e) => {
     if (e.code === 'Escape') {
@@ -35,7 +36,7 @@ const Popup = () => {
 
   return (
     <>
-      <motion.div className={styles.popup__background} onClick={() => isPopupOpen.set(!$isPopupOpen)} ></motion.div>
+      {!$isDevModeOn && <motion.div className={styles.popup__background} onClick={() => isPopupOpen.set(!$isPopupOpen)} ></motion.div>}
       <AnimatePresence>
         {$isPopupOpen && (
           <motion.div

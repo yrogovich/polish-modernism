@@ -1,11 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useStore } from '@nanostores/react';
-import { isPreloaderFinished } from '@/store';
+import {isDevModeOn, isPreloaderFinished} from '@/store'
 import { motion } from 'framer-motion'
 import styles from './styles.module.scss'
 
 const Preloader = () => {
   const $isPreloaderFinished = useStore(isPreloaderFinished);
+  const $isDevModeOn = useStore(isDevModeOn);
+
+  useEffect(() => {
+    isPreloaderFinished.set(true);
+  }, [$isDevModeOn]);
+
+  if ($isDevModeOn) return null;
 
   return (
     <motion.div
