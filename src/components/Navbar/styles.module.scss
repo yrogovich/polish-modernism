@@ -11,6 +11,7 @@
   align-items: flex-start;
   line-height: 1.4;
   gap: 1.6rem;
+  @include fluid-font(1.2, 1.4);
 
   @include rwd(tablet, true) {
     justify-content: space-between;
@@ -19,7 +20,6 @@
   &__label {
     cursor: pointer;
     text-transform: uppercase;
-    @include fluid-font(1.4, 1.8);
   }
 
   &__desktop {

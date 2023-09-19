@@ -41,20 +41,21 @@
 
   &__title {
     display: flex;
-    align-self: flex-end;
     justify-content: space-between;
     background-color: $c-black;
-    padding-top: 2rem;
     padding-bottom: 2rem;
+    font-family: $f-second;
+    font-size: 17.6vw;
+    padding-top: calc(3.05vw + 2rem);
+    line-height: .55;
+    text-transform: uppercase;
     @include fluid-spacing('gap', 5, 30);
 
     @include rwd(tablet) {
       flex-wrap: wrap;
-    }
-
-    svg {
-      max-width: 100%;
-      height: auto;
+      font-size: 20vw;
+      padding-top: calc(1.7vw + 2rem);
+      line-height: .75;
     }
   }
 }
