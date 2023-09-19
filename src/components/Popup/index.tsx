@@ -66,8 +66,8 @@ const Popup = () => {
                 </motion.div>
                 <motion.div className={styles.popup__authorName}>Yaroslav<br />Rogovich</motion.div>
                 <motion.div className={styles.popup__authorSocials}>
-                  <motion.a href="#" target="_blank" className={styles.popup__authorSocial}>Linkedin</motion.a>
-                  <motion.a href="#" className={styles.popup__authorSocial}>aka@yaro.works</motion.a>
+                  <motion.a href="https://www.linkedin.com/in/yaroslav-rogovich/" target="_blank" className={styles.popup__authorSocial}>Linkedin</motion.a>
+                  <motion.a href="mailto:aka@yaro.works" className={styles.popup__authorSocial}>aka@yaro.works</motion.a>
                 </motion.div>
               </motion.div>
 
@@ -78,8 +78,8 @@ const Popup = () => {
                 </motion.div>
                 <motion.div className={styles.popup__authorName}>Vladyslav<br />Starobzhanskyi</motion.div>
                 <motion.div className={styles.popup__authorSocials}>
-                  <motion.a href="#" target="_blank" className={styles.popup__authorSocial}>Linkedin</motion.a>
-                  <motion.a href="#" className={styles.popup__authorSocial}>starobzhanskyi@gmail.com</motion.a>
+                  <motion.a href="https://www.linkedin.com/in/starobzhanski/" target="_blank" className={styles.popup__authorSocial}>Linkedin</motion.a>
+                  <motion.a href="mailto:starobzhanskyi@gmail.com" className={styles.popup__authorSocial}>starobzhanskyi@gmail.com</motion.a>
                 </motion.div>
               </motion.div>
               </motion.div>
