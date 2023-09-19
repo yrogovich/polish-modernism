@@ -18,162 +18,154 @@ import image16 from "@/assets/images/image-16.jpg";
 export const architecture = [
   {
     image: image1,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: '“Okrąglak”',
+    years: '1948-1954',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Marka Leykam'
     ],
-    location: 'Warsaw',
+    location: 'Poznan',
   },
   {
     image: image2,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'building of Bank of National Economy',
+    years: '1928–1931',
     architect: [
-      'Erich Mendelsohn',
-      'Józef Szanajcy'
+      'Rudolf Świerczyński'
     ],
     location: 'Warsaw',
   },
   {
     image: image3,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Rudolf Petersdorff department store',
+    years: '1927–1928',
     architect: [
-      'Bohdan Lachert',
-      'Jerzy Romański'
+      'Erich Mendelsohn'
     ],
-    location: 'Warsaw',
+    location: 'Wroclaw',
   },
   {
     image: image4,
-    name: 'Central Department Store',
-    years: '1928-1930',
+    name: 'The Lacherts House',
+    years: '1928–1929',
     architect: [
-      'Arseniusz Romanowicz',
+      'Bohdan Lachert',
       'Józef Szanajcy'
     ],
     location: 'Warsaw',
   },
   {
     image: image5,
-    name: 'Institute "Monument - Child Health Centre"',
+    name: 'Skyscraper',
+    years: '1930–1934',
+    architect: [
+      'Construction Office of the Public Works Department of the Silesian Voivodship Office'
+    ],
+    location: 'Katowice',
+  },
+  {
+    image: image6,
+    name: '“Ochota” Railway Station',
     years: '1928-1930',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Arseniusz Romanowicz',
+      'Piotr Szymaniak'
     ],
     location: 'Warsaw',
   },
   {
-    image: image6,
-    name: 'Social Insurance Institution ',
-    years: '1928-1930',
-    architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
-    ],
-    location: 'Wrocław',
-  },
-  {
     image: image7,
-    name: 'Wrocław\'s Manhattan',
-    years: '1928-1930',
+    name: 'Hammer (building)',
+    years: '1964-1976',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Jan Bogusławski',
+      'Bohdana Gniewiewski'
     ],
     location: 'Warsaw',
   },
   {
     image: image8,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Main Railway Station',
+    years: '1972-1975',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Arseniusz Romanowicz',
+      'Piotr Szymaniak'
     ],
-    location: 'Poznań',
+    location: 'Warsaw',
   },
   {
     image: image9,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Wroclaw\'s Manhattan',
+    years: '1967-1973',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Jadwiga Grabowska-Hawrylak'
+    ],
+    location: 'Wroclaw',
+  },
+  {
+    image: image10,
+    name: 'Macieja Gintowta i Macieja Krasińskiego',
+    years: '1964–1971',
+    architect: [
+      'Maciej Gintowt',
+      'Maciej Krasiński'
     ],
     location: 'Katowice',
   },
   {
-    image: image10,
-    name: 'The Lacherts House',
-    years: '1928-1930',
-    architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
-    ],
-    location: 'Kalish',
-  },
-  {
     image: image11,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Institute "Monument - Child Health Centre"',
+    years: '1973–1977',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Arseniusz Romanowicz'
     ],
     location: 'Warsaw',
   },
   {
     image: image12,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Social Insurance Institution',
+    years: '1935-1936',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Roman Piotrowski'
     ],
-    location: 'Warsaw',
+    location: 'Gdynia',
   },
   {
     image: image13,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Church of the Divine Mercy',
+    years: '1977–1993',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Jerzy Kuźmienki',
+      'Andrzej Fajans'
     ],
-    location: 'Warsaw',
+    location: 'Kalish',
   },
   {
     image: image14,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Central Department Store',
+    years: '1949–1951',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Zbigniew Ihnatowicz',
+      'Jerzy Romański'
     ],
     location: 'Warsaw',
   },
   {
     image: image15,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Main Railway Station',
+    years: '1964-1972',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Team of architects "Tigers"'
     ],
-    location: 'Warsaw',
+    location: 'Katowice',
   },
   {
     image: image16,
-    name: 'The Lacherts House',
-    years: '1928-1930',
+    name: 'Central Statistical Office',
+    years: '1948–1951',
     architect: [
-      'Bohdan Lachert',
-      'Józef Szanajcy'
+      'Romuald Gutta',
+      'Zbigniew Wasiutyński',
     ],
     location: 'Warsaw',
   },
-]
+];
