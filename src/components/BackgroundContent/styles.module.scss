@@ -54,8 +54,7 @@
 
     svg {
       max-width: 100%;
-      height: auto; // Safari fix
-      height: fit-content;
+      height: auto;
     }
   }
 }
