@@ -1,20 +1,20 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Preloader from '../components/Preloader'
-import MasonryImages from '@/components/MasonryImages';
-import Navbar from "@/components/Navbar";
-import BackgroundContent from "@/components/BackgroundContent";
-import Footer from "@/components/Footer";
-import Popup from '@/components/Popup';
+import Layout from '@/layouts/Layout.astro'
+import Preloader from '@/components/Preloader'
+import MasonryImages from '@/components/MasonryImages'
+import Navbar from '@/components/Navbar'
+import BackgroundContent from '@/components/BackgroundContent'
+import Footer from '@/components/Footer'
+import Popup from '@/components/Popup'
 
-import { architecture } from '@/pages/data/architecture';
+import {architecture} from '@/pages/data/architecture'
 ---
 
-<Layout title="Polish modernism" >
-  <Preloader client:load />
-  <Navbar client:load />
-  <BackgroundContent client:load />
-  <MasonryImages images={architecture} client:load />
-  <Footer architecture={architecture} client:load />
-  <Popup client:load />
+<Layout title="Polish modernism">
+    <Preloader client:load/>
+    <Navbar client:load/>
+    <BackgroundContent client:load/>
+    <MasonryImages images={architecture} client:only="react"/>
+    <Footer architecture={architecture} client:load/>
+    <Popup client:load/>
 </Layout>

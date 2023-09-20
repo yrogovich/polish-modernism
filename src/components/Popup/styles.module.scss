@@ -8,13 +8,13 @@
   background-color: $c-preloader-bg;
   color: $c-black;
 
-  &__background {
+  &__bg {
     position: fixed;
+    z-index: 9;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
     cursor: pointer;
   }
 
@@ -39,6 +39,7 @@
     &Image {
       grid-area: image;
     }
+
     &Role {
       grid-area: role;
       border-top: 1px solid currentColor;
@@ -47,6 +48,7 @@
       letter-spacing: -0.3px;
       margin-bottom: 3rem;
     }
+
     &Name {
       grid-area: name;
       font-family: $f-second;
@@ -55,11 +57,13 @@
       line-height: .8;
       margin-top: .4rem;
     }
+
     &Socials {
       grid-area: socials;
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
+      align-items: flex-end;
       @include rwd(tablet) {
         flex-direction: column;
         gap: .8rem;

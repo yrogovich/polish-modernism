@@ -27,6 +27,26 @@ img {
   max-width: 100%;
 }
 
+button {
+  outline: none;
+  background: unset;
+  border: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+
 .container {
   margin: 0 auto;
   padding: 0 2rem;
