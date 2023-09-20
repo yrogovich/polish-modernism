@@ -9,6 +9,7 @@ const Preloader = () => {
   const $isDevModeOn = useStore(isDevModeOn);
 
   useEffect(() => {
+    if(!$isDevModeOn) return;
     isPreloaderFinished.set(true);
   }, [$isDevModeOn]);
 
