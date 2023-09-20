@@ -9,6 +9,14 @@ const Preloader = () => {
   const $isDevModeOn = useStore(isDevModeOn);
 
   useEffect(() => {
+    document.body.style.overflow = !$isPreloaderFinished ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [$isPreloaderFinished]);
+
+  useEffect(() => {
     if (!$isDevModeOn) return;
     isPreloaderFinished.set(true);
   }, [$isDevModeOn]);

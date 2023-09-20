@@ -15,7 +15,7 @@
   }
 
   &__title {
-    @include fluid-font(1.4, 1.8);
+    @include fluid-font(1.2, 1.4);
     @include fluid-spacing('margin-bottom', 20, 40);
     text-transform: uppercase;
     font-weight: 700;
