@@ -25,12 +25,13 @@
 
   &__list,
   &__singleList {
-    @include fluid-font(1.4, 1.8);
+    @include fluid-font(1.2, 1.4);
     line-height: 1.5;
     display: grid;
     gap: 1.6rem;
     text-transform: uppercase;
   }
+
   &__list {
     grid-template-columns: repeat(2, 1fr);
     @include rwd(mobile) {
