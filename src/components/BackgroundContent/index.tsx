@@ -58,11 +58,9 @@ const BackgroundContent = () => {
           <motion.span
             initial={{
               opacity: 0,
-              y: 200,
             }}
             animate={{
               opacity: 1,
-              y: 0,
             }}
             transition={{
               type: "easeInOut",
@@ -75,16 +73,12 @@ const BackgroundContent = () => {
           <motion.span
             initial={{
               opacity: 0,
-              y: 200,
             }}
             animate={{
               opacity: 1,
-              y: 0,
             }}
             transition={{
               type: "easeInOut",
-              stiffness: 30,
-              damping: 10,
               duration: 0.6,
               delay: 0.35,
             }}
@@ -94,16 +88,12 @@ const BackgroundContent = () => {
           <motion.span
             initial={{
               opacity: 0,
-              y: 200,
             }}
             animate={{
               opacity: 1,
-              y: 0,
             }}
             transition={{
               type: "easeInOut",
-              stiffness: 30,
-              damping: 10,
               duration: 0.6,
               delay: 0.4,
             }}
