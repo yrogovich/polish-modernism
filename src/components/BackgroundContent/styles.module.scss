@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  z-index: 1;
 
   &__about {
     border-top: 1px solid $c-text;
@@ -34,6 +35,7 @@
     font-weight: 100;
     letter-spacing: -0.192rem;
     text-transform: uppercase;
+
     span {
       display: inline-block;
     }
@@ -43,10 +45,10 @@
     display: flex;
     justify-content: space-between;
     background-color: $c-black;
-    padding-bottom: 2rem;
     font-family: $f-second;
     font-size: 17.6vw;
     padding-top: calc(3.05vw + 2rem);
+    padding-bottom: 2rem;
     line-height: .55;
     text-transform: uppercase;
     @include fluid-spacing('gap', 5, 30);

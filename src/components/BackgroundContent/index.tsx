@@ -14,6 +14,9 @@ const BackgroundContent = () => {
   useEffect(() => {
     const handleResize = () => {
       if (!titleRef?.current) return;
+
+      titleRef.current.style.transform = "";
+
       setTitleRefTop(titleRef.current.getBoundingClientRect().top);
     };
 
