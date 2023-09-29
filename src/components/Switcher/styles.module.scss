@@ -12,6 +12,7 @@
 
   input:checked + &__switch {
     background-color: $c-text;
+
     &:before {
       transform: translateX(1.2rem);
       background-color: $c-black;
@@ -29,6 +30,7 @@
     height: 2rem;
     border: 1px solid $c-text;
     transition: $trM;
+    flex-shrink: 0;
 
     &:before {
       position: absolute;

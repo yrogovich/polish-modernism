@@ -43,21 +43,31 @@ const Navbar = () => {
           className={styles.navbar}
           ref={navbarRef}
         >
-          <div className={styles.navbar__hamburger}>
-            <div className={styles.navbar__hamburger__line}></div>
-            <div className={styles.navbar__hamburger__line}></div>
-          </div>
-          <div className={styles.navbar__label}>
+          <div className={cn(styles.navbar__label, styles.navbar__logo)}>
             Collection <br /> of Polish modernism
           </div>
           <button
-            className={cn(styles.navbar__label, styles.navbar__desktop)}
+            className={cn(
+              styles.navbar__label,
+              styles.navbar__desktop,
+              styles.navbar__about,
+            )}
             onClick={() => isPopupOpen.set(!$isPopupOpen)}
           >
             About us
           </button>
-          <span className={cn(styles.navbar__label, styles.navbar__desktop)}>
-            <Switcher label={"Grid"} isOn={isSwitcherOn} setIsOn={setIsSwitcherOn} />
+          <span
+            className={cn(
+              styles.navbar__label,
+              styles.navbar__desktop,
+              styles.navbar__switch,
+            )}
+          >
+            <Switcher
+              label={"Grid"}
+              isOn={isSwitcherOn}
+              setIsOn={setIsSwitcherOn}
+            />
           </span>
         </motion.div>
       ) : null}

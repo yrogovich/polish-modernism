@@ -3,20 +3,33 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   background: $c-black;
   border-bottom: 1px solid $c-text;
   padding: 2rem 2rem 3.2rem;
-  display: flex;
   align-items: flex-start;
   line-height: 1.4;
   gap: 1.6rem;
+  @include grid();
   @include fluid-font(1.2, 1.4);
 
-  @include rwd(tablet, true) {
-    justify-content: space-between;
+  &__logo {
+    grid-column: span 10;
+    @include rwd(tablet, true) {
+      grid-column: 1 / 16;
+    }
   }
-  
+
+  &__about {
+    grid-column: 16 / 28;
+    text-align: left;
+  }
+
+  &__switch {
+    grid-column: 28 / 31;
+    justify-self: flex-end;
+  }
+
   &__label {
     cursor: pointer;
     text-transform: uppercase;
@@ -34,6 +47,7 @@
     flex-direction: column;
     gap: 1rem;
     margin-top: .4rem;
+    grid-template: 1 / 2;
 
     @include rwd(tablet, true) {
       display: none;

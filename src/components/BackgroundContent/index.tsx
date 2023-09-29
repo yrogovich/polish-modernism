@@ -34,27 +34,29 @@ const BackgroundContent = () => {
   return $isPreloaderFinished ? (
     <motion.div className={styles.content}>
       {!$isFooterInView && (
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 100,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            display: $isFooterInView ? "none" : "block",
-          }}
-          transition={{
-            type: "easeInOut",
-            duration: 0.6,
-            delay: 0.8,
-          }}
-          className={styles.content__about}
-        >
-          Modernism - a current in architecture, also called functionalism. It
-          developed in Poland in two phases, separated by World War II and the
-          enforced period of socialist realism in architecture.
-        </motion.div>
+        <div className={styles.content__grid}>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              display: $isFooterInView ? "none" : "block",
+            }}
+            transition={{
+              type: "easeInOut",
+              duration: 0.6,
+              delay: 0.8,
+            }}
+            className={styles.content__about}
+          >
+            Modernism - a current in architecture, also called functionalism. It
+            developed in Poland in two phases, separated by World War II and the
+            enforced period of socialist realism in architecture.
+          </motion.div>
+        </div>
       )}
       {!$isFooterInView && (
         <motion.div className={styles.content__dates}>
