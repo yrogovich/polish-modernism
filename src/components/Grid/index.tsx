@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
+import { useWindowSize } from "usehooks-ts";
 
 const Grid = ({ isOn }) => {
-  const cols = 30;
+  const { width } = useWindowSize();
+  const cols = width < 768 ? 12 : 30;
 
   const grid = Array(cols).fill(null);
 
