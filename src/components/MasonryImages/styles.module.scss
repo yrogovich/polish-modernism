@@ -4,24 +4,14 @@
   padding-bottom: 100vh;
   padding-bottom: 100lvh; // mobile CLS fix
 
-  position: relative;
-  z-index: 2;
-
-  display: grid;
-  align-items: flex-start;
-  grid-template-columns: repeat(30, 1fr);
-  grid-column-gap: 2rem;
-  @include fluid-spacing('grid-row-gap', 100, 200);
-
-  @include rwd(tablet) {
-    grid-template-columns: repeat(12, 1fr);
-  }
+  @include grid();
 }
 
 .image {
   position: relative;
   cursor: pointer;
   font-size: 1.4rem;
+  z-index: 2;
 
   img {
     width: 100%;
