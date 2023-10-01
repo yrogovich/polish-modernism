@@ -34,6 +34,9 @@ dependencies:
   react-dom:
     specifier: ^18.0.0
     version: 18.2.0(react@18.2.0)
+  react-lazy-load-image-component:
+    specifier: ^1.6.0
+    version: 1.6.0(react-dom@18.2.0)(react@18.2.0)
   usehooks-ts:
     specifier: ^2.9.1
     version: 2.9.1(react-dom@18.2.0)(react@18.2.0)
@@ -1905,6 +1908,14 @@ packages:
       p-locate: 5.0.0
     dev: false
 
+  /lodash.debounce@4.0.8:
+    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: false
+
+  /lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
+
   /log-symbols@5.1.0:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
     engines: {node: '>=12'}
@@ -2652,6 +2663,18 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-lazy-load-image-component@1.6.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-8KFkDTgjh+0+PVbH+cx0AgxLGbdTsxWMnxXzU5HEUztqewk9ufQAu8cstjZhyvtMIPsdMcPZfA0WAa7HtjQbBQ==}
+    peerDependencies:
+      react: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
+      react-dom: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
+    dependencies:
+      lodash.debounce: 4.0.8
+      lodash.throttle: 4.1.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:
