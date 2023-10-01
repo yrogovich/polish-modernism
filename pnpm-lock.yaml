@@ -13,6 +13,9 @@ dependencies:
   '@types/react-dom':
     specifier: ^18.0.6
     version: 18.2.7
+  '@types/react-lazy-load-image-component':
+    specifier: ^1.6.1
+    version: 1.6.1
   astro:
     specifier: ^3.0.8
     version: 3.0.8(sass@1.66.1)
@@ -939,6 +942,13 @@ packages:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
       '@types/react': 18.2.21
+    dev: false
+
+  /@types/react-lazy-load-image-component@1.6.1:
+    resolution: {integrity: sha512-+StHV0jW/O1eJW4tLhj0K9Znsltvgjnbcu+se+PBmGswEeMQfhvoe9iZA6nYQtj8b4bCKGLLjtJrNhsEF9seYA==}
+    dependencies:
+      '@types/react': 18.2.21
+      csstype: 3.1.2
     dev: false
 
   /@types/react@18.2.21:

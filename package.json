@@ -14,6 +14,7 @@
     "@nanostores/react": "^0.7.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/react-lazy-load-image-component": "^1.6.1",
     "astro": "^3.0.8",
     "astro-compress": "^2.0.15",
     "classnames": "^2.3.2",
