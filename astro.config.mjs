@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
 import react from "@astrojs/react";
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,8 +15,5 @@ export default defineConfig({
       }
     }
   },
-  integrations: [
-    react(),
-    compress()
-  ]
+  integrations: [react(), compress()]
 });
