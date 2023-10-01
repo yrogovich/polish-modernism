@@ -38,6 +38,12 @@
 
     &Image {
       grid-area: image;
+
+      img {
+        aspect-ratio: 1/1;
+        height: auto;
+        object-fit: cover;
+      }
     }
 
     &Role {
