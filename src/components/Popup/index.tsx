@@ -3,8 +3,8 @@ import { useStore } from "@nanostores/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { isMobileMenuOpen, isPopupOpen } from "@/store.js";
 import { authors } from "@/pages/data/authors.js";
-
 import styles from "./styles.module.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Popup = () => {
   const $isPopupOpen = useStore(isPopupOpen);
@@ -44,7 +44,12 @@ const Popup = () => {
         href={author.socials[0].link}
         className={styles.popup__authorImage}
       >
-        <motion.img src={author.image.src} alt={author.name} />
+        <LazyLoadImage
+          src={author.image.src}
+          alt={author.name}
+          height={360}
+          width={360}
+        />
       </motion.a>
       <motion.div className={styles.popup__authorName}>
         {author.name}

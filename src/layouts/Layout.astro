@@ -1,25 +1,26 @@
 ---
-import '../styles/index.scss'
+import "../styles/index.scss";
 
-const {title} = Astro.props
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-      window.scrollTo(0, 0)
-    </script>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="Astro description">
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/svg+xml" href="/polish-modernism/favicon.svg"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{title}</title>
+  <script>
+    window.scrollTo(0, 0);
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description">
+  <meta name="viewport" content="width=device-width" />
+  <meta name="theme-color" content="#FFF500" />
+  <link rel="icon" type="image/svg+xml" href="/polish-modernism/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
 </head>
 <body>
 <main class="page">
-    <slot/>
+  <slot />
 </main>
 </body>
 </html>
