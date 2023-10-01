@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
-import { useWindowSize } from "usehooks-ts";
+import useMediaQuery from "@/hooks/useMediaQuery.jsx";
 
 const Grid = ({ isOn }) => {
-  const { width } = useWindowSize();
-  const cols = width < 768 ? 12 : 30;
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const cols = isMobile ? 12 : 30;
 
   const grid = Array(cols).fill(null);
 

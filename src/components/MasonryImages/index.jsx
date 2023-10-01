@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery.jsx";
 import styles from "./styles.module.scss";
 import { isPopupOpen } from "@/store.js";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const MasonryImages = ({ images }) => {
   const [randomizedImages, setRandomizedImages] = useState([]);
@@ -64,12 +63,7 @@ const MasonryImages = ({ images }) => {
                   }}
                   onClick={() => isPopupOpen.set(true)}
                 >
-                  <LazyLoadImage
-                    src={image.src}
-                    alt={name}
-                    height={800}
-                    width={800}
-                  />
+                  <img src={image.src} alt={name} loading={"lazy"} />
                   <div className={styles.image__hover}>
                     <p>{location}</p>
                     <h2>{name}</h2>
