@@ -56,6 +56,9 @@
       text-transform: uppercase;
       line-height: .8;
       margin-top: .4rem;
+      @include rwd(tablet) {
+        font-size: 10vw;
+      }
     }
 
     &Socials {
@@ -65,6 +68,8 @@
       gap: 2rem;
       align-items: flex-end;
       @include rwd(tablet) {
+        align-self: flex-end;
+        align-items: flex-start;
         flex-direction: column;
         gap: .8rem;
       }

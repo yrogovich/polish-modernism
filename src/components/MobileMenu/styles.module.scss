@@ -1,0 +1,32 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $c-text;
+  color: $c-black;
+  text-transform: uppercase;
+  padding: 2rem;
+  font-size: 4rem;
+  z-index: 3;
+  transform: translateY(-100%);
+
+  &__items {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    border-bottom: 1px solid $c-black;
+    text-align: left;
+
+    &:first-child {
+      border-top: 1px solid $c-black;
+    }
+  }
+}

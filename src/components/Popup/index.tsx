@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useStore } from "@nanostores/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { isPopupOpen } from "@/store.js";
+import { isMobileMenuOpen, isPopupOpen } from "@/store.js";
 import { authors } from "@/pages/data/authors.js";
 
 import styles from "./styles.module.scss";
@@ -17,6 +17,10 @@ const Popup = () => {
 
   useEffect(() => {
     document.body.style.overflow = $isPopupOpen ? "hidden" : "auto";
+
+    if ($isPopupOpen) {
+      isMobileMenuOpen.set(false);
+    }
 
     return () => {
       document.body.style.overflow = "auto";
@@ -36,9 +40,12 @@ const Popup = () => {
       <motion.div className={styles.popup__authorRole}>
         {author.role}
       </motion.div>
-      <motion.div className={styles.popup__authorImage}>
-        <motion.img src={author.image.src} alt="Author" />
-      </motion.div>
+      <motion.a
+        href={author.socials[0].link}
+        className={styles.popup__authorImage}
+      >
+        <motion.img src={author.image.src} alt={author.name} />
+      </motion.a>
       <motion.div className={styles.popup__authorName}>
         {author.name}
       </motion.div>

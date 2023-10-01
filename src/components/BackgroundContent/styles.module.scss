@@ -23,6 +23,7 @@
     @include rwd(tablet) {
       position: static;
       margin-top: 20%;
+      padding: 0;
     }
   }
 
@@ -39,7 +40,7 @@
     @include fluid-spacing('max-width', 160, 360);
 
     @include rwd(tablet) {
-      grid-column: 7 / 12;
+      grid-column: 7 / 13;
     }
   }
 

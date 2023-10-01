@@ -2,14 +2,21 @@ import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 import styles from "./styles.module.scss";
 import { useStore } from "@nanostores/react";
-import { isPopupOpen, isPreloaderFinished, navHeight } from "@/store.js";
+import {
+  isMobileMenuOpen,
+  isPopupOpen,
+  isPreloaderFinished,
+  navHeight,
+} from "@/store.js";
 import Switcher from "@/components/Switcher";
 import Grid from "@/components/Grid";
 import { motion } from "framer-motion";
+import MobileMenu from "@/components/MobileMenu";
 
 const Navbar = () => {
   const $isPopupOpen = useStore(isPopupOpen);
   const $isPreloaderFinished = useStore(isPreloaderFinished);
+  const $isMobileMenuOpen = useStore(isMobileMenuOpen);
   const [navbarHeight, setNavbarHeight] = useState(null);
   const navbarRef = useRef(null);
   const [isSwitcherOn, setIsSwitcherOn] = useState(false);
@@ -25,6 +32,7 @@ const Navbar = () => {
 
   return (
     <>
+      <MobileMenu isShowGrid={isSwitcherOn} setIsShowGrid={setIsSwitcherOn} />
       <Grid isOn={isSwitcherOn} />
       {$isPreloaderFinished ? (
         <motion.div
@@ -43,6 +51,38 @@ const Navbar = () => {
           className={styles.navbar}
           ref={navbarRef}
         >
+          <motion.button
+            className={styles.navbar__hamburger}
+            onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}
+            layout
+          >
+            <motion.div
+              className={styles.navbar__hamburgerLine}
+              variants={{
+                closed: {},
+                opened: {
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%) rotate(45deg)",
+                },
+              }}
+              initial={"closed"}
+              animate={$isMobileMenuOpen ? "opened" : "closed"}
+            ></motion.div>
+            <motion.div
+              className={styles.navbar__hamburgerLine}
+              variants={{
+                closed: {},
+                opened: {
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%) rotate(-45deg)",
+                },
+              }}
+              initial={"closed"}
+              animate={$isMobileMenuOpen ? "opened" : "closed"}
+            ></motion.div>
+          </motion.button>
           <div className={cn(styles.navbar__label, styles.navbar__logo)}>
             Collection <br /> of Polish modernism
           </div>
