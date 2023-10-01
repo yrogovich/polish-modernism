@@ -1,54 +1,57 @@
-# Astro Starter Kit: Basics
+# Polish Modernism Concept
 
-```
-npm create astro@latest -- --template basics
-```
+## 🌟 Overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+This project showcases a generative design concept for a website. Each time you visit the site, the layout will be
+different, offering a unique user experience.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📝 Article about the Concept
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Article writing in progress. Stay tuned for a deep dive into the conceptual thinking and technologies behind this
+project.
 
-## 🚀 Project Structure
+## 🧞 Project Commands
 
-Inside of your Astro project, you'll see the following folders and files:
+All commands should be run from the root directory of the project using a terminal.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+| Command                   | Description                                                 |
+|:--------------------------|:------------------------------------------------------------|
+| `npm install`             | Installs project dependencies                               |
+| `npm run dev`             | Starts local development server at `localhost:3000`         |
+| `npm run build`           | Builds production site to `./dist/`                         |
+| `npm run preview`         | Previews the production build locally                       |
+| `npm run astro ...`       | Executes Astro CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Access help for the Astro CLI                               |
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎨 Design
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The design for this project was prepared by [Vladyslav Starobzhanskyi](https://www.linkedin.com/in/starobzhanski/).
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🔧 Installation and Setup
 
-## 🧞 Commands
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yrogovich/polish-modernism-concept.git
+   ```
+2. Navigate to the project directory
+   ```bash
+   cd polish-modernism-concept 
+   ```
+3. Install dependencies
 
-All commands are run from the root of the project, from a terminal:
+   recommended method👇🏾
+   ```bash
+   pmpm install
+   ```
+   or old scool method 👴🏾
+     ```bash
+   npm install
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🤝 Contributing
 
-## 👀 Want to learn more?
+Feel free to open issues and pull requests. For more significant changes, please open an issue first.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📜 License
+
+This project is licensed under the [MIT License](https://opensource.org/license/mit/).
