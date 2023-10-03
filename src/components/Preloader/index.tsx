@@ -33,7 +33,7 @@ const Preloader = () => {
       transition={{
         type: "easeInOut",
         duration: 1,
-        delay: 2.8,
+        delay: 2.5,
       }}
       onAnimationComplete={() => isPreloaderFinished.set(!$isPreloaderFinished)}
     >
@@ -45,11 +45,9 @@ const Preloader = () => {
         variants={{
           hidden: {
             opacity: 0,
-            y: 100,
           },
           visible: {
             opacity: 1,
-            y: 0,
           },
         }}
         transition={{
@@ -67,14 +65,14 @@ const Preloader = () => {
             }}
             animate={{
               y: [280, 0, 0],
+              opacity: [1, 1, 0],
             }}
             transition={{
               times: [0, 0.5, 1],
-              type: "linear",
+              type: "easeInOut",
               duration: 1,
-              delay: 1.2,
+              delay: 1.6,
             }}
-            onAnimationComplete={() => setIsHideLoading(true)}
           >
             100
           </motion.div>
@@ -87,14 +85,15 @@ const Preloader = () => {
               y: 280,
             }}
             animate={{
-              y: [280, 0, -280],
+              y: [280, -280],
             }}
             transition={{
-              times: [0, 0.5, 1],
-              type: "linear",
-              duration: 1,
-              delay: 0.6,
+              times: [0, 1],
+              type: "easeInOut",
+              duration: 1.2,
+              delay: 0.8,
             }}
+            onAnimationComplete={() => setIsHideLoading(true)}
           >
             46
           </motion.div>
@@ -112,7 +111,7 @@ const Preloader = () => {
             }}
             transition={{
               times: [0, 0.5, 1],
-              type: "linear",
+              type: "easeInOut",
               duration: 1,
             }}
           >
