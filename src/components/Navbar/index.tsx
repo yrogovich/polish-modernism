@@ -37,16 +37,16 @@ const Navbar = () => {
       {$isPreloaderFinished ? (
         <motion.div
           initial={{
-            translateY: "-100%",
+            opacity: 0,
           }}
           animate={{
-            translateY: 0,
+            opacity: 1,
           }}
           transition={{
-            type: "spring",
             stiffness: 30,
             damping: 10,
             duration: 0.8,
+            delay: 0.5,
           }}
           className={styles.navbar}
           ref={navbarRef}

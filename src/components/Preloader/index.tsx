@@ -31,7 +31,7 @@ const Preloader = () => {
         translateY: "-100%",
       }}
       transition={{
-        type: "easeInOut",
+        type: "easeOut",
         duration: 1,
         delay: 2.5,
       }}

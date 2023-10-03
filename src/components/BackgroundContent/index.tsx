@@ -48,7 +48,7 @@ const BackgroundContent = () => {
             transition={{
               type: "easeInOut",
               duration: 0.6,
-              delay: 0.8,
+              delay: 0.5,
             }}
             className={styles.content__about}
           >
