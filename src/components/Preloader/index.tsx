@@ -3,6 +3,7 @@ import { useStore } from "@nanostores/react";
 import { isDevModeOn, isPreloaderFinished } from "@/store";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
+import ShowSingleDigit from "@/components/ShowSingleDigit";
 
 const Preloader = () => {
   const $isPreloaderFinished = useStore(isPreloaderFinished);
@@ -74,7 +75,11 @@ const Preloader = () => {
               delay: 1.6,
             }}
           >
-            100
+            <ShowSingleDigit
+              initialArray={["85", "100"]}
+              speed={0.2}
+              delay={0.8}
+            />
           </motion.div>
         </div>
         <div className={styles.preloader__overflow}>
@@ -95,7 +100,7 @@ const Preloader = () => {
             }}
             onAnimationComplete={() => setIsHideLoading(true)}
           >
-            46
+            <ShowSingleDigit initialArray={["46", "55", "64"]} speed={0.4} />
           </motion.div>
         </div>
         <div className={styles.preloader__overflow}>
@@ -115,7 +120,7 @@ const Preloader = () => {
               duration: 1,
             }}
           >
-            01
+            <ShowSingleDigit initialArray={["01", "05"]} speed={0.2} />
           </motion.div>
         </div>
       </div>
