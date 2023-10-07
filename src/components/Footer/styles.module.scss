@@ -2,15 +2,16 @@
   padding: 2rem;
 
   &__grid {
-    @include fluid-spacing('gap', 20, 40);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    @include rwd(tablet) {
-      grid-template-columns: repeat(2, 1fr);
+    @include grid();
+  }
+
+  &__column {
+    grid-column: span 10;
+    @include rwd(laptop-small) {
+      grid-column: span 15;
     }
-    @include rwd(mobile) {
-      grid-template-columns: 1fr;
+    @include rwd(tablet) {
+      grid-column: span 12;
     }
   }
 

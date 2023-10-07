@@ -30,6 +30,7 @@ const Footer = ({ architecture }) => {
       {isInView && (
         <motion.div layout className={styles.footer__grid}>
           <motion.div
+            className={styles.footer__column}
             initial={{
               opacity: 0,
             }}
@@ -48,6 +49,7 @@ const Footer = ({ architecture }) => {
             </ul>
           </motion.div>
           <motion.div
+            className={styles.footer__column}
             initial={{
               opacity: 0,
             }}
@@ -66,6 +68,7 @@ const Footer = ({ architecture }) => {
             </ul>
           </motion.div>
           <motion.div
+            className={styles.footer__column}
             initial={{
               opacity: 0,
             }}

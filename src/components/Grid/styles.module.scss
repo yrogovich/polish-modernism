@@ -5,8 +5,8 @@
   padding-right: 2rem;
   height: 100vh;
   width: 100%;
-  pointer-events: none;
   mix-blend-mode: luminosity;
+  pointer-events: none;
 
   @include grid();
 
@@ -14,5 +14,6 @@
     background-color: $c-text;
     width: 100%;
     height: 100%;
+    pointer-events: none;
   }
 }
