@@ -48,9 +48,7 @@ export const architecture = [
     image: image5,
     name: "Skyscraper",
     years: "1930–1934",
-    architect: [
-      "Construction Office of the Public Works Department of the Silesian Voivodship Office",
-    ],
+    architect: ["Silesian Voivodship Office"],
     location: "Katowice",
   },
   {
