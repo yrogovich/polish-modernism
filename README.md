@@ -7,8 +7,7 @@ different, offering a unique user experience.
 
 ## 📝 Article about the Concept
 
-Article writing in progress. Stay tuned for a deep dive into the conceptual thinking and technologies behind this
-project.
+[Exploring Generative Design: A Polish Modernism Case Study](https://medium.com/@yrogovich/algorithmic-artistry-demonstrating-generative-design-with-a-touch-of-polish-modernism-3e92b92522dc)
 
 ## 🧞 Project Commands
 
